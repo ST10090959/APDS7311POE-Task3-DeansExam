@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   sonar_scan:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:lates17.2.0
     steps:
       - checkout
       - run:
