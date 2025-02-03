@@ -17,7 +17,7 @@ jobs:
               -Dsonar.projectKey=ST10090959_APDS7311POE-Task3-DeansExam \
               -Dsonar.organization=st10090959 \
               -Dsonar.host.url="https://sonarcloud.io" \
-              -Dsonar.login=$SONAR_TOKEN
+              -Dsonar.login=04388e58943c2a21d6e637e1065129f17f3b5fdb
 
 workflows:
   version: 2
