@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\APDS7311-Part2",
+    "\\APDS7311-Part2\\Backend",
+    "\\APDS7311-Part2\\Backend\\config",
+    "\\APDS7311-Part2\\Backend\\Keys",
+    "\\APDS7311-Part2\\Backend\\routes",
+    "\\APDS7311-Part2\\frontend",
+    "\\APDS7311-Part2\\frontend\\src",
+    "\\APDS7311-Part2\\frontend\\src\\components",
+    "\\APDS7311-Part2\\frontend\\src\\utils"
+  ],
+  "SelectedNode": "\\APDS7311-Part2\\Backend\\config\\db.js",
+  "PreviewInSolutionExplorer": false
+}
