@@ -1,0 +1,235 @@
+/* Define Dark Colors */
+$body-bg: #121212; /* Dark background for modern aesthetic */
+$form-bg: #1f1f1f;
+$white: #ffffff;
+$main: #1ab188; /* Main green for buttons and highlights */
+$main-dark: darken($main, 5%);
+$gray-light: #2e2e2e; /* Darker gray */
+$gray: #aaa; /* Light gray for text */
+$br: 16px; /* Rounded corners for a modern effect */
+
+/* Typography */
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+
+body {
+  background: $body-bg;
+  font-family: $font-primary, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+  color: $main;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $main-dark;
+  }
+}
+
+/* Top Navigation Bar */
+nav {
+  background-color: $form-bg;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: top 0.3s ease; /* for hiding navbar on scroll */
+}
+
+h2 {
+  font-size: 2rem; /* Increased size */
+  color: $main;
+  font-weight: 700;
+  background: linear-gradient(to right, $main, $main-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  font-size: 1rem;
+  color: $gray;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $main;
+  }
+}
+
+/* Added styles to ensure the logout button is inline */
+.logout-btn {
+  font-size: 1rem;
+  color: $white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &:hover {
+    color: $main;
+  }
+  margin-left: 30px; /* Ensure spacing from the other buttons */
+}
+
+/* Welcome Message */
+.welcome-message {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+  border-radius: $br;
+  color: $white;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.hide-welcome {
+  display: none;
+}
+
+/* Main Content */
+main {
+  padding-top: 160px; /* Adjust for fixed navbar and welcome message */
+  padding-bottom: 40px; /* Ensure footer or bottom content isn't hidden */
+  min-height: 100vh; /* Ensure main section fills the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $body-bg;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to bottom, #2d3748, #1a202c);
+  color: $white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Cards Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  width: 100%; /* Full width */
+}
+
+.card {
+  background-color: $form-bg;
+  padding: 40px;
+  width: 280px; /* Make cards square */
+  height: 280px;
+  border-radius: $br;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card .icon {
+  font-size: 3rem;
+  color: $main;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $white;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: $gray;
+}
+
+/* About Us Card (Larger with Highlight) */
+.about-us-card {
+  background-color: $form-bg;
+  padding: 60px;
+  width: 320px; /* Slightly wider */
+  height: 320px;
+  border-radius: $br;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.about-us-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $main;
+}
+
+.about-us-card p {
+  font-size: 1rem;
+  color: $gray;
+  margin-top: 20px;
+}
+
+/* Footer or Additional Section */
+.additional-content {
+  background-color: $form-bg;
+  padding: 40px;
+  border-radius: $br;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.additional-content h3 {
+  font-size: 1.8rem;
+  color: $white;
+}
+
+.additional-content p {
+  font-size: 1.2rem;
+  color: $gray;
+}
+
+/* Ensure the cards and content aren't hidden */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}

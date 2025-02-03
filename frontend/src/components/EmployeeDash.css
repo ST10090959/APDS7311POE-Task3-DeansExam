@@ -1,0 +1,135 @@
+/* Employees Dashboard Layout */
+.employees-dashboard {
+    padding: 2rem;
+    color: #e2e8f0;
+    text-align: center;
+    background-color: #1a202c; /* Dark background */
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #2d3748;
+  }
+  
+  .navbar-logo {
+    color: #48bb78; /* Green color for logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  
+  .logout {
+    color: #f56c6c; /* Light red logout button */
+  }
+  
+  .heading {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #48bb78;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Tables Container */
+  .tables-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 30px;
+    align-items: center;
+  }
+  
+  /* Table Section (for Pending/Approved Payments) */
+  .table-section {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #2d3748;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Table Title */
+  .table-title {
+    font-size: 1.5rem;
+    color: #48bb78;
+    margin-bottom: 1rem;
+  }
+  
+  /* Payment Table */
+  .employees-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #2d3748;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .employees-table th, .employees-table td {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .employees-table th {
+    background-color: #48bb78; /* Green header */
+    color: white;
+  }
+  
+  .employees-table td {
+    background-color: #2b323d;
+    color: #e2e8f0;
+  }
+  
+  .employees-table button {
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .employees-table button:hover {
+    background-color: #38a169;
+  }
+  
+  .employees-table button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+  
+  /* Empty Table Message */
+  .empty-message {
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .employees-table th, .employees-table td {
+      padding: 0.8rem;
+    }
+  
+    .tables-container {
+      padding: 1rem;
+    }
+  }
+  

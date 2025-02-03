@@ -1,0 +1,272 @@
+/* General Page Layout */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a202c; /* Dark background for Dashboard */
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  box-sizing: border-box;
+}
+
+/* Use min-height for the entire screen */
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed Navbar */
+nav {
+  background-color: #2d3748;
+  border-bottom: 1px solid #4a5568;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  transition: top 0.3s ease;
+}
+
+.nav-hidden {
+  top: -100px; /* Hide the navbar on scroll */
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+nav li {
+  font-size: 1rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav li:hover {
+  color: #48bb78; /* Green hover effect */
+}
+
+.logout-btn {
+  font-size: 1rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 30px;
+  transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: #48bb78; /* Green hover effect */
+}
+
+/* Welcome Message */
+.welcome-message {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+  background-color: #48bb78; /* Green color */
+  padding: 20px 30px;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.hide-welcome {
+  display: none;
+}
+
+/* Main Content */
+main {
+  padding-top: 160px; /* Adjust for fixed navbar and welcome message */
+  padding-bottom: 40px;
+  background-color: #1a202c;
+  flex-grow: 1; /* Allow it to fill remaining space */
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Cards Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Card */
+.card {
+  background-color: #2d3748;
+  padding: 40px;
+  width: 100%; /* Make it responsive */
+  max-width: 280px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card .icon {
+  font-size: 3rem;
+  color: #48bb78;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #e2e8f0;
+}
+
+/* About Us Card (Not Clickable) */
+.about-us-card {
+  background-color: #2d3748;
+  padding: 60px;
+  width: 100%;
+  max-width: 320px; /* Ensure card is responsive */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.about-us-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #48bb78;
+}
+
+.about-us-card p {
+  font-size: 1rem;
+  color: #e2e8f0;
+  margin-top: 20px;
+}
+
+/* Footer or Additional Section */
+.additional-content {
+  background-color: #2d3748;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.additional-content h3 {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.additional-content p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets or Smaller Devices */
+@media screen and (max-width: 768px) {
+  /* Adjust the font size for welcome message */
+  .welcome-message {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+
+  /* Adjust cards layout for smaller devices */
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%; /* Cards take up more width on smaller screens */
+  }
+
+  /* Adjust the additional content layout */
+  .additional-content {
+    padding: 20px;
+  }
+
+  .additional-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .additional-content p {
+    font-size: 1rem;
+  }
+}
+
+/* For Mobile Devices */
+@media screen and (max-width: 480px) {
+  /* Adjust cards layout further for smaller screens */
+  .card-container {
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 95%; /* Make the cards even smaller */
+  }
+
+  /* Further adjust welcome message */
+  .welcome-message {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 95%;
+  }
+
+  .additional-content {
+    padding: 15px;
+  }
+
+  .additional-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .additional-content p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,101 @@
+/* Background */
+.create-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .user-card {
+    background-color: #1f1f1f;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    overflow-y: auto; /* Enable scrolling if needed */
+  }
+  
+  .user-card h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  /* Form field */
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  .form-field label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+    color: #aaa;
+  }
+  
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #333;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+  }
+  
+  .form-field input:focus,
+  .form-field select:focus {
+    border-color: #1ab188; /* Green focus border */
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #1ab188;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1a9b6f; /* Darken color */
+  }
+  
+  /* Help section */
+  .help-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .help-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #bbb;
+  }
+  
+  .help-section p {
+    font-size: 1rem;
+    color: #aaa;
+  }
+  
+  .help-section a {
+    color: #1ab188;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .help-section a:hover {
+    color: #1a9b6f;
+  }
+  
