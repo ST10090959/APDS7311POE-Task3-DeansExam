@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 jobs:
   sonar_scan:
@@ -17,7 +17,7 @@ jobs:
               -Dsonar.projectKey=ST10090959_APDS7311POE-Task3-DeansExam \
               -Dsonar.organization=st10090959 \
               -Dsonar.host.url="https://sonarcloud.io" \
-              -Dsonar.login=$
+              
 workflows:
   version: 2
   sonar_workflow:
